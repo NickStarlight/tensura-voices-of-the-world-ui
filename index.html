@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#02060a" />
+    <link rel="stylesheet" href="assets/celestial-font.css" />
+    <title>Raphael — Wise One</title>
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+        background: #02060a;
+      }
+      body {
+        color: #fff;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      canvas {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+      .error {
+        position: fixed;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: 2rem;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas
+      id="canvas"
+      aria-label="A luminous blue planet surrounded by slowly rotating celestial inscriptions and constellations."
+    ></canvas>
+    <noscript
+      ><p class="error">
+        Enable JavaScript to view the celestial animation.
+      </p></noscript
+    >
+    <script type="module">
+      import { mountScene } from "./scene.js";
+
+      mountScene(document.querySelector("#canvas"));
+    </script>
+  </body>
+</html>
